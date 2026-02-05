@@ -15,8 +15,8 @@ The Streamlit web app lets you upload any image and get an instant prediction wi
 streamlit run app/streamlit_app.py
 ```
 
-<!-- If you add a screenshot, uncomment this: -->
-<!-- ![Demo Screenshot](assets/demo_screenshot.png) -->
+<img width="1321" height="939" alt="image" src="https://github.com/user-attachments/assets/22757dc6-9873-4350-ae95-543de42ecd23" />
+
 
 ## How It Works
 
@@ -78,7 +78,7 @@ Through testing, I found the model can be fooled:
 1. **Grad-CAM visualization** - Understand what the model actually looks at before trying to fix it
 2. **Hard negative mining** - Add training images of yellow wigs, beanies, bike helmets to break the color shortcut
 3. **Random grayscale augmentation** - Force the model to learn shape features, not just color
-4. **Object detection (YOLOv8)** - The right paradigm for this problem: detects each person individually, handles groups, works at any distance
+4. **Object detection (YOLOv8)** - The righ approach for this problem: detects each person individually, handles groups, works at any distance
 
 > The classification approach was a deliberate learning exercise to understand PyTorch fundamentals, transfer learning, and the full ML pipeline. Object detection is the natural next step for production use.
 
