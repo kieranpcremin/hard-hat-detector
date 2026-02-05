@@ -19,33 +19,6 @@ streamlit run app/streamlit_app.py
 
 
 
-## How It Works
-
-```
-Input Image (any size)
-       |
-       v
-  ┌─────────────────────────────────────┐
-  │  Preprocessing                      │
-  │  Resize to 224x224, normalize       │
-  └─────────────────────────────────────┘
-       |
-       v
-  ┌─────────────────────────────────────┐
-  │  ResNet18 Backbone (Pre-trained)    │
-  │  Extracts visual features:          │
-  │  edges -> textures -> shapes        │
-  └─────────────────────────────────────┘
-       |
-       v
-  ┌─────────────────────────────────────┐
-  │  Custom Classifier Head             │
-  │  Dropout(0.5) -> Linear(512 -> 2)  │
-  └─────────────────────────────────────┘
-       |
-       v
-  "Hard Hat" or "No Hard Hat" + confidence %
-```
 
 ## Results
 
