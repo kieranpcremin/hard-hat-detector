@@ -32,33 +32,6 @@ streamlit run app/streamlit_app.py
 
 ---
 
-## ✨ How It Works
-
-```
-Input Image (any size)
-       |
-       v
-  ┌─────────────────────────────────────┐
-  │  Preprocessing                      │
-  │  Resize to 224x224, normalize       │
-  └─────────────────────────────────────┘
-       |
-       v
-  ┌─────────────────────────────────────┐
-  │  ResNet18 Backbone (Pre-trained)    │
-  │  Extracts visual features:          │
-  │  edges -> textures -> shapes        │
-  └─────────────────────────────────────┘
-       |
-       v
-  ┌─────────────────────────────────────┐
-  │  Custom Classifier Head             │
-  │  Dropout(0.5) -> Linear(512 -> 2)  │
-  └─────────────────────────────────────┘
-       |
-       v
-  "Hard Hat" or "No Hard Hat" + confidence %
-```
 
 ### Training Strategy
 
@@ -209,16 +182,6 @@ python inference.py path/to/image.jpg --model ../models/best_model.pth
 - **Pillow** - Image loading and processing
 - **matplotlib / seaborn** - Visualization in notebooks
 - **scikit-learn** - Model evaluation metrics
-
----
-
-## 🔮 What's Next
-
-- [ ] Grad-CAM visualization to understand model decisions
-- [ ] YOLOv8 object detection for per-person classification
-- [ ] Safety vest detection (multi-label)
-- [ ] Webcam real-time detection
-- [ ] Model deployment to cloud
 
 ---
 
