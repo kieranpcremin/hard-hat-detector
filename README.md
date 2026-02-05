@@ -20,6 +20,14 @@ streamlit run app/streamlit_app.py
 
 
 
+### Training Strategy
+
+The model is trained in two phases:
+
+1. **Frozen backbone** (10 epochs, lr=0.001) - Only the classifier head trains. The pre-trained ResNet18 features (edges, textures, shapes learned from ImageNet) are preserved.
+2. **Fine-tuning** (5 epochs, lr=0.0001) - The last two residual blocks are unfrozen and trained with a lower learning rate, adapting generic features to hard-hat-specific features.
+
+
 ## Results
 
 | Metric | Value |
@@ -30,12 +38,6 @@ streamlit run app/streamlit_app.py
 | Training Time | ~15 epochs (10 frozen + 5 fine-tuning) |
 | Inference Speed | <100ms per image on CPU |
 
-### Training Strategy
-
-The model is trained in two phases:
-
-1. **Frozen backbone** (10 epochs, lr=0.001) - Only the classifier head trains. The pre-trained ResNet18 features (edges, textures, shapes learned from ImageNet) are preserved.
-2. **Fine-tuning** (5 epochs, lr=0.0001) - The last two residual blocks are unfrozen and trained with a lower learning rate, adapting generic features to hard-hat-specific features.
 
 ## Known Limitations & Honest Reflection
 
