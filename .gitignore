@@ -36,6 +36,9 @@ Thumbs.db
 # Streamlit
 temp_upload.jpg
 
+# Learning notes (personal, not for repo)
+learningnotes.md
+
 # Claude Code
 .claude/
 
