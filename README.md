@@ -28,7 +28,8 @@ The Streamlit web app lets you upload any image and get an instant prediction wi
 streamlit run app/streamlit_app.py
 ```
 
-<img width="948" height="803" alt="image" src="https://github.com/user-attachments/assets/0455ab05-7c13-4767-bd05-19786ce5677f" />
+<img width="889" height="571" alt="image" src="https://github.com/user-attachments/assets/e35a86f6-df56-4543-8222-5e60d5542525" />
+
 
 ---
 
