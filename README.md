@@ -47,8 +47,9 @@ The model is trained in two phases:
 | Metric | Value |
 |--------|-------|
 | **Best Validation Accuracy** | **94.6%** |
-| **Architecture** | ResNet18 (11.7M params) |
-| **Trainable Parameters** | ~1,026 (frozen) / ~5.6M (fine-tuned) |
+| **Architecture** | ResNet18 (11.7M total params) |
+| **Trainable (Phase 1 - frozen)** | ~1,026 (classifier head only) |
+| **Trainable (Phase 2 - fine-tuned)** | ~5.6M (last 2 residual blocks + head) |
 | **Training Time** | ~15 epochs (10 frozen + 5 fine-tuning) |
 | **Inference Speed** | <100ms per image on CPU |
 
